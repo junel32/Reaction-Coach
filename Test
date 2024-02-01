@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Caller</title>
+  <style>
+    body {
+      text-align: center;
+      font-size: 2em;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="numberDisplay">Ready to start!</h1>
+  <button onclick="callOutNumber()">Call Out Number</button>
+
+  <script>
+    let currentNumber = 0;
+
+    function callOutNumber() {
+      currentNumber++;
+      if (currentNumber > 4) {
+        currentNumber = 1;
+      }
+      document.getElementById('numberDisplay').innerText = `Number: ${currentNumber}`;
+    }
+  </script>
+
+</body>
+</html>
